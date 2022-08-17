@@ -1,7 +1,7 @@
 {
-    "recommendations": [
-        "antfu.unocss",
-        "esbenp.prettier-vscode",
-        "dbaeumer.vscode-eslint"
-    ]
+	"recommendations": [
+		"antfu.unocss",
+		"esbenp.prettier-vscode",
+		"dbaeumer.vscode-eslint"
+	]
 }

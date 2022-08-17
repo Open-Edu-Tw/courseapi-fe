@@ -36,22 +36,23 @@ export const Logo: Component<LogoProps> = (_props) => {
 
 	return (
 		<>
-			{/** 亮色時使用 */}
+			{/**
+			 * PERF: 不用擔心同時算繪兩個 DOM 造成的效能隱憂——
+			 * hidden 就不會被考慮進算繪階段。
+			 */}
+
+			{/* 亮色時使用 */}
 			<div class="inline dark:hidden">
 				<LightLogo {...props} />
 			</div>
 
-			{/** 暗色時使用 */}
+			{/* 暗色時使用 */}
 			<div class="hidden dark:inline">
 				<DarkLogo {...props} />
 			</div>
 		</>
 	);
 };
-
-/**
- * 依目前瀏覽器主題切換顏色。
- */
 
 export default Logo;
 
