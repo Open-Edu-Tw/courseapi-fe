@@ -1,32 +1,30 @@
-# SolidStart
+# CourseAPI's experimental frontend
 
-Everything you need to build a Solid project, powered by [`solid-start`](https://github.com/ryansolid/solid-start/tree/master/packages/solid-start);
+嘗試用 Solid.js、UnoCSS 以及各種新興技術，搭建一個資源佔用少、速度快，且易於維護的 CourseAPI 前端。
 
-## Creating a project
-
-```bash
-# create a new project in the current directory
-npm init solid@next
-
-# create a new project in my-app
-npm init solid@next my-app
-```
-
-> Note: the `@next` is temporary
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## 開發
 
 ```bash
-npm run dev
+# 安裝依賴
+pnpm i
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+# 啟動開發伺服器
+pnpm dev
 ```
 
-## Building
+## 部署上生產環境
 
-Solid apps are built with _adapters_, which optimise your project for deployment to different environments.
+```bash
+# 組建前端供生產用途
+pnpm build
 
-By default, `npm run build` will generate a Node app that you can run with `node build`. To use a different adapter, add it to the `devDependencies` in `package.json` and specify in your `vite.config.js`.
+# 執行生產版前端
+pnpm run
+
+# 也可以直接執行 `server.js`：
+node dist/server.js
+```
+
+## 授權條款
+
+GPL-3.0-only
