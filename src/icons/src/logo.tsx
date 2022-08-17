@@ -1,17 +1,5 @@
 import { mergeProps } from "solid-js";
-
 import type { Component } from "solid-js";
-
-// /**
-//  * CourseAPI Logo 的顏色。
-//  *
-//  * - Light – 適合亮色主題。
-//  * - Dark – 適合暗色主題。
-//  */
-// export enum LogoColor {
-// 	Light = "light",
-// 	Dark = "dark",
-// }
 
 /**
  * CourseAPI Logo 的右方是否要有間隔？
@@ -22,14 +10,16 @@ import type { Component } from "solid-js";
 export type Padding = boolean;
 
 export type LogoProps = {
-	// /** @see {@link LogoColor} */
-	// color?: LogoColor;
 	/** @see {@link Padding} */
 	padding?: Padding;
 };
 
 /**
  * CourseAPI 的 Logo。
+ * 
+ * 內建亮暗色變體，使用 `dark` class 開關。其他資訊請見 props。
+ *
+ * @see https://www.figma.com/file/AxsteaioMaZvVEJQwc9UrG/CourseAPI-UI-Design-v2-(Public-Beta)?node-id=501%3A8203
  */
 export const Logo: Component<LogoProps> = (_props) => {
 	const props = mergeProps({ padding: false }, _props);

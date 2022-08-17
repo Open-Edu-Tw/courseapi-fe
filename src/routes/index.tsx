@@ -1,13 +1,22 @@
 import { Title } from "solid-start";
 import Counter from "~/components/Counter";
-import Logo from "~/icons/logo";
+import { BarsIcon, DownloadIcon, FilledStarIcon, LinkIcon, PlayIcon, SearchIcon, ShareIcon, StrokeStarIcon } from "~/icons";
+import { Logo } from "~/icons";
 
 export default function Home() {
 	return (
-		<main class="dark">
+		<main class=" bg-coolGray-900">
 			<Title>CourseAPI – 首頁</Title>
 			<p class="bg-coolgray dark:font-bold">Hello, World!</p>
 			<Logo padding />
+			<BarsIcon />
+			<DownloadIcon />
+			<FilledStarIcon />
+			<LinkIcon />
+			<PlayIcon />
+			<SearchIcon />
+			<ShareIcon />
+			<StrokeStarIcon />
 			<Counter />
 			<p>
 				Visit{" "}

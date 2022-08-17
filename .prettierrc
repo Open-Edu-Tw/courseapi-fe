@@ -1,5 +1,8 @@
 {
 	"useTabs": true,
 	"trailingComma": "all",
-	"bracketSameLine": true
+	"bracketSameLine": true,
+	"importOrderSeparation": true,
+	"importOrderSortSpecifiers": true,
+	"plugins": ["@trivago/prettier-plugin-sort-imports"]
 }
