@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "antfu.unocss",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+    ]
+}

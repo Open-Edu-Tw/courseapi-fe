@@ -1,11 +1,13 @@
 import { Title } from "solid-start";
 import Counter from "~/components/Counter";
+import Logo from "~/icons/logo";
 
 export default function Home() {
   return (
     <main>
-      <Title>Hello World</Title>
-      <h1>Hello world!</h1>
+      <Title>CourseAPI – 首頁</Title>
+      <p class="bg-coolgray dark:font-bold dark:">Hello, World!</p>
+      <Logo padding />
       <Counter />
       <p>
         Visit{" "}
