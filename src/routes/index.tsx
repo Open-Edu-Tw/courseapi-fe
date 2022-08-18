@@ -14,7 +14,7 @@ import { Logo } from "~/icons";
 
 export default function Home() {
 	return (
-		<main class=" bg-coolGray-900">
+		<main>
 			<Title>CourseAPI – 首頁</Title>
 			<p class="bg-coolgray dark:font-bold">Hello, World!</p>
 			<Logo padding />
