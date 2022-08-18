@@ -68,18 +68,21 @@ export const Button: Component<ButtonProps> = (_props) => {
 		"color",
 		"icon",
 		"children",
+		"class",
 	]);
 	const icon = children(() => ourProps.icon);
 	const text = children(() => ourProps.children);
 
 	return (
 		<button
-			class="flex"
+			class={`flex rounded-3 ${ourProps.class} items-center`}
 			classList={{
-				"bg-gray-200 dark:bg-gray-700": props.color === ButtonColor.Basic,
-				"bg-sky-200 dark:bg-lightblue-700": props.color === ButtonColor.Accent,
-				"mx-6 my-3 gap-x-2.5": props.size === ButtonSize.Medium,
-				"mx-9 my-4 gap-x-3": props.size === ButtonSize.Large,
+				"bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200":
+					props.color === ButtonColor.Basic,
+				"bg-sky-200 dark:bg-lightblue-700 text-gray-800 dark:text-gray-200":
+					props.color === ButtonColor.Accent,
+				"px-6 py-3 gap-x-2.5": props.size === ButtonSize.Medium,
+				"px-9 py-4 gap-x-3": props.size === ButtonSize.Large,
 			}}
 			{...buttonProps}>
 			<div>{icon()}</div>
