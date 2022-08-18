@@ -1,5 +1,6 @@
 import { Title } from "solid-start";
 import Counter from "~/components/Counter";
+import { Button } from "~/components/src/button";
 import {
 	BarsIcon,
 	DownloadIcon,
@@ -27,6 +28,7 @@ export default function Home() {
 			<ShareIcon />
 			<StrokeStarIcon />
 			<Counter />
+			<Button size="large" color="accent">Hello, World!</Button>
 			<p>
 				Visit{" "}
 				<a href="https://docs.solidjs.com/start" target="_blank">
