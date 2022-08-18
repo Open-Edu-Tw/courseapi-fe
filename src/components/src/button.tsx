@@ -58,6 +58,11 @@ export interface ButtonProps extends ComponentProps<"button"> {
 	children?: JSX.Element;
 }
 
+/**
+ * 按鈕。
+ *
+ * @see https://www.figma.com/file/AxsteaioMaZvVEJQwc9UrG/CourseAPI-UI-Design-v2-(Public-Beta)?node-id=20%3A62
+ */
 export const Button: Component<ButtonProps> = (_props) => {
 	const props = mergeProps(
 		{ size: ButtonSize.Medium, color: ButtonColor.Basic },

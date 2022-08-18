@@ -29,7 +29,7 @@ const NavbarItemDisplayNameMap: Record<NavbarEntry, string> = {
 	[NavbarEntry.Hashtags]: "Hashtags",
 };
 
-export type NavbarItemsProps = {
+export type NavItemsProps = {
 	/**
 	 * 要選取的導覽列項目。
 	 */
@@ -45,9 +45,11 @@ export type NavbarItemsProps = {
  * 導覽列項目。
  *
  * `selected` 會讓指定的項目變為粗體。
+ *
+ * @see https://www.figma.com/file/AxsteaioMaZvVEJQwc9UrG/CourseAPI-UI-Design-v2-(Public-Beta)?node-id=54%3A677
  */
-export const NavbarItems: Component<NavbarItemsProps> = (props) => (
-	<section class="flex items-center gap-5">
+export const NavItems: Component<NavItemsProps> = (props) => (
+	<section class="flex items-center gap-5 text-gray-800 dark:text-gray-200 font-light">
 		<For each={Object.values(NavbarEntry)}>
 			{(item) => {
 				const url = NavbarItemUrlMap[item];

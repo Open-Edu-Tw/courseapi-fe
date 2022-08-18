@@ -1,4 +1,4 @@
-import type { Component, ComponentProps } from "solid-js";
+import type { Component, JSX } from "solid-js";
 import { Show, mergeProps } from "solid-js";
 import { SearchIcon } from "~/icons";
 
@@ -45,20 +45,22 @@ export interface SearchBarProps {
 	placeholderText?: string;
 
 	/**
-	 * 傳入搜尋按鈕的 props。
+	 * 如果使用者按下「搜尋」按鈕，則觸發這個 event。
 	 */
-	searchButtonProps?: ComponentProps<"button">;
+	onSearchIconPressed?: JSX.EventHandler<HTMLButtonElement, MouseEvent>;
 
 	/**
-	 * 傳入搜尋框的 props。
+	 * 當使用者更改關鍵字時，或按下 Enter 時，觸發這個 event。
 	 */
-	searchBarProps?: ComponentProps<"input">;
+	onSearchBarChanged?: JSX.EventHandler<HTMLInputElement, Event | KeyboardEvent>;
 }
 
 /**
  * CourseAPI 的搜尋列。
  *
  * 有兩個變體：搜尋按鈕 (`collapsed`) 和搜尋列 (`expanded`)。
+ *
+ * @see https://www.figma.com/file/AxsteaioMaZvVEJQwc9UrG/CourseAPI-UI-Design-v2-(Public-Beta)?node-id=14%3A21
  */
 export const SearchBar: Component<SearchBarProps> = (_props) => {
 	const props = mergeProps(
@@ -68,10 +70,6 @@ export const SearchBar: Component<SearchBarProps> = (_props) => {
 		},
 		_props,
 	);
-
-	// 保持 reactivity
-	const searchButtonProps = () => props.searchButtonProps;
-	const searchBarProps = () => props.searchBarProps;
 
 	return (
 		<section
@@ -90,21 +88,27 @@ export const SearchBar: Component<SearchBarProps> = (_props) => {
 				"px-5": props.variant === SearchBarVariant.Expanded,
 			}}>
 			<button
-				{...searchButtonProps()}
+				onClick={(e) =>
+					props.onSearchIconPressed && props.onSearchIconPressed(e)
+				}
 				type="button"
-				class={`flex items-center justify-center ${searchButtonProps().class}`}>
+				class="flex items-center justify-center">
 				<SearchIcon />
 			</button>
 
 			<Show when={props.variant === SearchBarVariant.Expanded}>
 				<input
-					{...searchBarProps()}
+					onChange={(e) =>
+						props.onSearchBarChanged && props.onSearchBarChanged(e)
+					}
+					onKeyPress={(e) => {
+						if (props.onSearchIconPressed && e.key === "Enter") {
+							props.onSearchBarChanged(e);
+						}
+					}}
 					spellcheck
-					class={`bg-transparent focus:outline-none min-w-max ${
-						searchBarProps().class
-					}`}
+					class="bg-transparent focus:outline-none min-w-max"
 					classList={{
-						...searchBarProps().classList,
 						"w-full": props.fullWidth,
 					}}
 					type="search"

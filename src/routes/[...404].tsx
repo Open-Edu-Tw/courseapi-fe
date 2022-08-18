@@ -3,17 +3,11 @@ import { HttpStatusCode } from "solid-start/server";
 
 export default function NotFound() {
 	return (
-		<main>
-			<Title>Not Found</Title>
+		<main class="text-gray-200">
+			<Title>CourseAPI – 無此頁面！</Title>
 			<HttpStatusCode code={404} />
-			<h1>Page Not Found</h1>
-			<p>
-				Visit{" "}
-				<a href="https://docs.solidjs.com/start" target="_blank">
-					docs.solidjs.com/start
-				</a>{" "}
-				to learn how to build SolidStart apps.
-			</p>
+			<h1 class="font-bold text-2xl">無此頁面。</h1>
+			<p>請回 <a href="/">首頁</a>。</p>
 		</main>
 	);
 }
