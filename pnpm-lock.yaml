@@ -4,7 +4,6 @@ specifiers:
   '@solidjs/meta': ^0.28.0
   '@solidjs/router': ^0.4.2
   '@trivago/prettier-plugin-sort-imports': ^3.3.0
-  '@types/babel__core': ^7.1.19
   '@typescript-eslint/eslint-plugin': ^5.33.1
   '@typescript-eslint/parser': ^5.33.1
   '@unocss/preset-mini': ^0.45.7
@@ -16,7 +15,6 @@ specifiers:
   solid-js: 1.4.7
   solid-start: 0.1.0-alpha.99
   solid-start-node: 0.1.0-alpha.99
-  styled-jsx: ^5.0.4
   typescript: ^4.7.4
   undici: ^5.8.0
   unocss: ^0.45.7
@@ -31,7 +29,6 @@ dependencies:
 
 devDependencies:
   '@trivago/prettier-plugin-sort-imports': 3.3.0_prettier@2.7.1
-  '@types/babel__core': 7.1.19
   '@typescript-eslint/eslint-plugin': 5.33.1_vsoshirnpb7xw6mr7xomgfas2i
   '@typescript-eslint/parser': 5.33.1_4rv7y5c6xz3vfxwhbrcxxi73bq
   '@unocss/preset-mini': 0.45.7
@@ -41,7 +38,6 @@ devDependencies:
   eslint-plugin-solid: 0.7.1_4rv7y5c6xz3vfxwhbrcxxi73bq
   prettier: 2.7.1
   solid-start-node: 0.1.0-alpha.99_k6qpyqiqmj3rt7o6hbzmgf55pi
-  styled-jsx: 5.0.4
   typescript: 4.7.4
   unocss: 0.45.7_vite@3.0.7
   vite: 3.0.7
@@ -1460,35 +1456,6 @@ packages:
       prettier: 2.7.1
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@types/babel__core/7.1.19:
-    resolution: {integrity: sha512-WEOTgRsbYkvA/KCsDwVEGkd7WAr1e3g31VHQ8zy5gul/V1qKullU/BU5I68X5v7V3GnB9eotmom4v5a5gjxorw==}
-    dependencies:
-      '@babel/parser': 7.18.11
-      '@babel/types': 7.18.10
-      '@types/babel__generator': 7.6.4
-      '@types/babel__template': 7.4.1
-      '@types/babel__traverse': 7.18.0
-    dev: true
-
-  /@types/babel__generator/7.6.4:
-    resolution: {integrity: sha512-tFkciB9j2K755yrTALxD44McOrk+gfpIpvC3sxHjRawj6PfnQxrse4Clq5y/Rq+G3mrBurMax/lG8Qn2t9mSsg==}
-    dependencies:
-      '@babel/types': 7.18.10
-    dev: true
-
-  /@types/babel__template/7.4.1:
-    resolution: {integrity: sha512-azBFKemX6kMg5Io+/rdGT0dkGreboUVR0Cdm3fz9QJWpaQGJRQXl7C+6hOTCZcMll7KFyEQpgbYI2lHdsS4U7g==}
-    dependencies:
-      '@babel/parser': 7.18.11
-      '@babel/types': 7.18.10
-    dev: true
-
-  /@types/babel__traverse/7.18.0:
-    resolution: {integrity: sha512-v4Vwdko+pgymgS+A2UIaJru93zQd85vIGWObM5ekZNdXCKtDYqATlEYnWgfo86Q6I1Lh0oXnksDnMU1cwmlPDw==}
-    dependencies:
-      '@babel/types': 7.18.10
     dev: true
 
   /@types/cookie/0.5.1:
@@ -3732,20 +3699,6 @@ packages:
     resolution: {integrity: sha512-CzFnRRXhzWIdItT3OmF8SQfWyahHhjq3HwcMNCNLn+N7klOOqPjMeG/4JSu77D7ypZdGvSzvkrbyeTMizz2VrA==}
     dependencies:
       inline-style-parser: 0.1.1
-    dev: true
-
-  /styled-jsx/5.0.4:
-    resolution: {integrity: sha512-sDFWLbg4zR+UkNzfk5lPilyIgtpddfxXEULxhujorr5jtePTUqiPDc5BC0v1NRqTr/WaFBGQQUoYToGlF4B2KQ==}
-    engines: {node: '>= 12.0.0'}
-    peerDependencies:
-      '@babel/core': '*'
-      babel-plugin-macros: '*'
-      react: '>= 16.8.0 || 17.x.x || ^18.0.0-0'
-    peerDependenciesMeta:
-      '@babel/core':
-        optional: true
-      babel-plugin-macros:
-        optional: true
     dev: true
 
   /supports-color/5.5.0:

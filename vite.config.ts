@@ -4,11 +4,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
 	plugins: [
-		solid({
-			babel: {
-				plugins: ["styled-jsx/babel"],
-			},
-		}),
+		solid(),
 		Unocss("./unocss.config.ts"),
 	],
 });
