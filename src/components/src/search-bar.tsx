@@ -102,9 +102,7 @@ export const SearchBar: Component<SearchBarProps> = (_props) => {
 						props.onSearchBarChanged && props.onSearchBarChanged(e)
 					}
 					onKeyPress={(e) => {
-						if (props.onSearchIconPressed && e.key === "Enter") {
-							props.onSearchBarChanged(e);
-						}
+						props.onSearchIconPressed && props.onSearchBarChanged(e)
 					}}
 					spellcheck
 					class="bg-transparent focus:outline-none min-w-max"

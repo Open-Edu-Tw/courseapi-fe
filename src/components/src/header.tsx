@@ -10,38 +10,14 @@ import {
 	createSignal,
 	splitProps,
 } from "solid-js";
+import type { LogoProps } from "~/icons";
 import { BarsIcon, Logo } from "~/icons";
+import { useNavigate } from "solid-start";
 
 /**
  * 使用者停止輸入幾毫秒後才觸發 onSearch？
  */
 const searchDebounceMs = 500;
-
-/**
- * Header 的樣式。
- */
-export enum HeaderStyle {
-	/**
-	 * 手機版，但搜尋列放獨立一列。
-	 *
-	 * @see https://www.figma.com/file/AxsteaioMaZvVEJQwc9UrG/CourseAPI-UI-Design-v2-(Public-Beta)?node-id=18%3A80
-	 */
-	MobileWithSearchBar = "mobile_with_search_bar",
-
-	/**
-	 * 手機版，不展開搜尋列。
-	 *
-	 * @see https://www.figma.com/file/AxsteaioMaZvVEJQwc9UrG/CourseAPI-UI-Design-v2-(Public-Beta)?node-id=18%3A82
-	 */
-	Mobile = "mobile",
-
-	/**
-	 * 電腦版。
-	 *
-	 * @see https://www.figma.com/file/AxsteaioMaZvVEJQwc9UrG/CourseAPI-UI-Design-v2-(Public-Beta)?node-id=18%3A101
-	 */
-	Desktop = "desktop",
-}
 
 // -- 類型組件 --
 
@@ -99,7 +75,7 @@ export const DesktopHeader: Component<DesktopHeaderProps> = (props) => {
 
 	return (
 		<div class="flex items-center justify-between w-full h-full py-6 px-8">
-			<Logo padding />
+			<LogoButton padding />
 			<NavItems {...navProps} />
 			<DebouncedSearchBar
 				variant={SearchBarVariant.Expanded}
@@ -138,7 +114,7 @@ export const MobileHeader: Component<MobileHeaderProps> = (props) => {
 		<div class="flex flex-col w-full h-full gap-3 py-4 px-5">
 			<div class="flex items-center justify-between w-full h-full">
 				<HeaderMenuButton onToggleMenu={() => menuProps.onToggleMenu()} />
-				<Logo />
+				<LogoButton />
 				<SearchBar
 					variant={SearchBarVariant.Collapsed}
 					onSearchIconPressed={() => setShowSearchBar((s) => !s)}
@@ -190,3 +166,13 @@ const HeaderMenuButton: Component<HpMenu> = (props) => (
 		<BarsIcon />
 	</button>
 );
+
+const LogoButton: Component<LogoProps> = (props) => {
+	const navigate = useNavigate();
+
+	return (
+		<button type="button" onClick={() => navigate("/")}>
+			<Logo {...props} />
+		</button>
+	)
+}
