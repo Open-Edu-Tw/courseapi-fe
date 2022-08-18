@@ -6,6 +6,7 @@ specifiers:
   '@trivago/prettier-plugin-sort-imports': ^3.3.0
   '@typescript-eslint/eslint-plugin': ^5.33.1
   '@typescript-eslint/parser': ^5.33.1
+  '@unocss/preset-mini': ^0.45.7
   '@unocss/reset': ^0.45.7
   eslint: ^8.22.0
   eslint-config-prettier: ^8.5.0
@@ -30,6 +31,7 @@ devDependencies:
   '@trivago/prettier-plugin-sort-imports': 3.3.0_prettier@2.7.1
   '@typescript-eslint/eslint-plugin': 5.33.1_vsoshirnpb7xw6mr7xomgfas2i
   '@typescript-eslint/parser': 5.33.1_4rv7y5c6xz3vfxwhbrcxxi73bq
+  '@unocss/preset-mini': 0.45.7
   '@unocss/reset': 0.45.7
   eslint: 8.22.0
   eslint-config-prettier: 8.5.0_eslint@8.22.0

@@ -1,6 +1,15 @@
 import { Title } from "solid-start";
 import Counter from "~/components/Counter";
-import { BarsIcon, DownloadIcon, FilledStarIcon, LinkIcon, PlayIcon, SearchIcon, ShareIcon, StrokeStarIcon } from "~/icons";
+import {
+	BarsIcon,
+	DownloadIcon,
+	FilledStarIcon,
+	LinkIcon,
+	PlayIcon,
+	SearchIcon,
+	ShareIcon,
+	StrokeStarIcon,
+} from "~/icons";
 import { Logo } from "~/icons";
 
 export default function Home() {

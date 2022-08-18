@@ -20,6 +20,7 @@
 		"@trivago/prettier-plugin-sort-imports": "^3.3.0",
 		"@typescript-eslint/eslint-plugin": "^5.33.1",
 		"@typescript-eslint/parser": "^5.33.1",
+		"@unocss/preset-mini": "^0.45.7",
 		"@unocss/reset": "^0.45.7",
 		"eslint": "^8.22.0",
 		"eslint-config-prettier": "^8.5.0",

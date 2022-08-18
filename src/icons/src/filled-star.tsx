@@ -5,7 +5,7 @@ import type { Component } from "solid-js";
  * 實心星星圖示。
  *
  * 內建亮暗色變體，使用 `dark` class 開關。
- * 
+ *
  * @see https://www.figma.com/file/AxsteaioMaZvVEJQwc9UrG/CourseAPI-UI-Design-v2-(Public-Beta)?node-id=311%3A2424
  */
 export const FilledStarIcon: Component = () => (
