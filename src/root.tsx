@@ -33,7 +33,7 @@ export default function Root() {
 					}
 				`}</Style>
 			</Head>
-			<Body class="bg-gray-50 dark:bg-gray-800">
+			<Body class="bg-gray-50 dark:bg-gray-900">
 				<Suspense>
 					<ErrorBoundary>
 						<RootHeader />

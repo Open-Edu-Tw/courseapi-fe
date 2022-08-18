@@ -74,7 +74,7 @@ export const DesktopHeader: Component<DesktopHeaderProps> = (props) => {
 	);
 
 	return (
-		<div class="flex items-center justify-between w-full h-full py-6 px-8">
+		<div class="flex items-center justify-between w-full h-full py-6 px-8 bg-gray-50 dark:bg-gray-900">
 			<LogoButton padding />
 			<NavItems {...navProps} />
 			<DebouncedSearchBar
@@ -111,7 +111,7 @@ export const MobileHeader: Component<MobileHeaderProps> = (props) => {
 
 	createEffect(() => console.log(showSearchBar()));
 	return (
-		<div class="flex flex-col w-full h-full gap-3 py-4 px-5">
+		<div class="flex flex-col w-full h-full gap-3 py-4 px-5 bg-gray-50 dark:bg-gray-900">
 			<div class="flex items-center justify-between w-full h-full">
 				<HeaderMenuButton onToggleMenu={() => menuProps.onToggleMenu()} />
 				<LogoButton />
