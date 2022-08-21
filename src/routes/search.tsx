@@ -11,7 +11,7 @@ const searchApi = async (query: string) => {
 export default function Search() {
     const [param] = useSearchParams();
     const query = () => param.q;
-    const [searchResult] = createResource(query(), searchApi);
+    const [searchResult] = createResource(query, searchApi);
 
 	return (
 		<main class="text-gray-200 px-40">
