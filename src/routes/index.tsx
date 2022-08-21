@@ -5,7 +5,7 @@ export default function Home() {
 		<main>
 			<Title>CourseAPI – 首頁</Title>
 
-			<img src="https://raw.githubusercontent.com/Open-Edu-Tw/courseapi-fe/main/assets/hero.svg" alt="CourseAPI is work-in-progress" />
+			<img src="https://raw.githubusercontent.com/Open-Edu-Tw/courseapi-fe/main/assets/hero.svg" alt="CourseAPI is work-in-progress" width="100%" />
 		</main>
 	);
 }
