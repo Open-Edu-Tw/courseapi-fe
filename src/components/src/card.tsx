@@ -48,7 +48,7 @@ export type CardProps = {
  */
 export const Card: Component<CardProps> = (props) => {
     return (
-        <article class="course-card flex flex-col gap-2 bg-gray-200 dark:bg-gray-800 w-full rounded-3 p-4 pr-6 gap-3">
+        <article class="course-card flex flex-col gap-2 shadow-lg bg-gray-100 dark:bg-gray-800 w-full rounded-3 p-4 pr-6 gap-3">
             <section class="course-card--header text-gray-700 dark:text-gray-300 flex flex-col gap-1">
                 <section class="course-card--meta font-light text-sm">
                     {props.meta}
