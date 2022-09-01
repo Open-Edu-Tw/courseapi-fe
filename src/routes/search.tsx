@@ -18,7 +18,9 @@ const searchApi = async (query: string) => {
 	);
 	const json = await response.json();
 
-	return json.data as SearchApiSchema[];
+	const rawData = json.data as SearchApiSchema[];
+    rawData.sort((a, b) => b.description.length - a.description.length);
+    return rawData;
 };
 
 export default function Search() {
