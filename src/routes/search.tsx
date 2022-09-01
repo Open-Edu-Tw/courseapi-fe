@@ -30,7 +30,7 @@ export default function Search() {
 		<main class="text-gray-800 dark:text-gray-200 lg:px-40 md:px-20 px-5">
 			<Title>CourseAPI – 「{query()}」的搜尋結果</Title>
 
-			<h1 class="font-bold text-4xl mb-4">「{query()}」的搜尋結果</h1>
+			<h1 class="font-bold text-2xl lg:text-3xl mb-4">「{query()}」的搜尋結果</h1>
 
 			<Show when={!searchResult.loading} fallback={<div>Loading...</div>}>
 				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
