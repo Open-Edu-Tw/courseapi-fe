@@ -4,7 +4,7 @@ WORKDIR /app
 # 安裝 pnpm
 #
 # 用 array 式的 RUN 可以減少 invoke sh 的開銷。
-RUN ["npm", "install", "-g", "pnpm"]
+RUN ["corepack", "enable"]
 
 # 只複製 lockfile 跟 package.json 然後安裝依賴
 #
@@ -23,7 +23,7 @@ FROM node:16-alpine
 WORKDIR /app
 
 # 安裝 pnpm
-RUN ["npm", "install", "-g", "pnpm"]
+RUN ["corepack", "enable"]
 
 # 複製 package.json 和 pnpm-lock.yaml（包含 type: module 宣告）
 COPY package.json pnpm-lock.yaml LICENSE ./
