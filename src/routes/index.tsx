@@ -1,4 +1,5 @@
 import { Title } from "solid-start";
+import { Footer } from "~/page-component/footer";
 
 export default function Home() {
 	return (

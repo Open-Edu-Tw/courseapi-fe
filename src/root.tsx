@@ -15,6 +15,7 @@ import {
 	Title,
 } from "solid-start";
 import "uno.css";
+import { Footer } from "./page-component/footer";
 import { RootHeader } from "./page-component/root-header";
 
 export default function Root() {
@@ -37,9 +38,12 @@ export default function Root() {
 				<Suspense>
 					<ErrorBoundary>
 						<RootHeader />
-						<Routes>
-							<FileRoutes />
-						</Routes>
+						<main class="min-h-100vh">
+							<Routes>
+								<FileRoutes />
+							</Routes>
+						</main>
+						<Footer />
 					</ErrorBoundary>
 				</Suspense>
 				<Scripts />
