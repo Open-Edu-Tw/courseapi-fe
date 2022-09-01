@@ -1,5 +1,4 @@
 import type { NavItemsProps } from "./nav-items";
-import { NavItems } from "./nav-items";
 import type { SearchBarProps } from "./search-bar";
 import { SearchBar, SearchBarVariant } from "./search-bar";
 import { debounce } from "lodash-es";
@@ -67,7 +66,7 @@ export type DesktopHeaderProps = HpSearchBar & HpNavItems;
  * @see https://www.figma.com/file/AxsteaioMaZvVEJQwc9UrG/CourseAPI-UI-Design-v2-(Public-Beta)?node-id=18%3A101
  */
 export const DesktopHeader: Component<DesktopHeaderProps> = (props) => {
-	const [navProps, searchBarProps] = splitProps(
+	const [_navProps, searchBarProps] = splitProps(
 		props,
 		["selected", "onSelect"],
 		["onSearch"],
@@ -76,7 +75,7 @@ export const DesktopHeader: Component<DesktopHeaderProps> = (props) => {
 	return (
 		<div class="flex items-center justify-between w-full h-full py-6 px-8 bg-gray-50 dark:bg-gray-900">
 			<LogoButton padding />
-			<NavItems {...navProps} />
+			{/* <NavItems {...navProps} /> */}
 			<DebouncedSearchBar
 				variant={SearchBarVariant.Expanded}
 				fullWidth={false}
