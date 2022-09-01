@@ -34,7 +34,7 @@ export default function Search() {
 
 			<Show when={!searchResult.loading} fallback={<div>Loading...</div>}>
 				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
-					<For each={searchResult()} fallback={<p>沒東西笑死</p>}>
+					<For each={searchResult()} fallback={<p>找不到 {query()} 的搜尋結果。</p>}>
 						{(item) => {
                             const instructors = createMemo(() => {
                                 if (item.instructor.length === 0) return null;
