@@ -1,5 +1,7 @@
 # CourseAPI's experimental frontend
 
+> 註：Front-end 有重新建立設計方向的計畫，這個前端未來將被 deprecated。
+
 嘗試用 Solid.js、UnoCSS 以及各種新興技術，搭建一個資源佔用少、速度快，且易於維護的 CourseAPI 前端。
 
 ## 開發
