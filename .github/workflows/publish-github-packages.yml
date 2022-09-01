@@ -40,8 +40,10 @@ jobs:
       # Build and push Docker image with Buildx (don't push on PR)
       # https://github.com/docker/build-push-action
       - name: Build and push Docker image
-        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        uses: docker/build-push-action@v3
         with:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ env.REGISTRY }}/${{ env.GITHUB_REPOSITORY_OWNER_PART_SLUG_URL }}/${{ env.GITHUB_REPOSITORY_NAME_PART_SLUG_URL }}:${{ env.GITHUB_REF_SLUG }}
           labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
