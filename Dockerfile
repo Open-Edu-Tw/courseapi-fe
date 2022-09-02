@@ -15,8 +15,10 @@ COPY package.json pnpm-lock.yaml ./
 RUN ["pnpm", "i", "--frozen-lockfile"]
 
 # 複製剩餘檔案，完成建置程序。
-COPY ./src ./public ./vite.config.ts ./unocss.config.ts ./
-RUN ["pnpm", "build", "--frozen-lockfile"]
+COPY ./tsconfig.json ./vite.config.ts ./unocss.config.ts ./
+COPY ./public/ ./public/
+COPY ./src/ ./src/
+RUN ["pnpm", "build"]
 
 
 FROM node:16-alpine
@@ -32,8 +34,8 @@ COPY package.json pnpm-lock.yaml LICENSE ./
 RUN ["pnpm", "i", "-P", "--frozen-lockfile"]
 
 # 從 builder 複製出成品 dist
-COPY --from=builder /app/dist ./dist/
+COPY --from=builder /app/dist/ ./dist/
 
 EXPOSE 3000
 
-ENTRYPOINT ["node", "./dist/server.js"]
+ENTRYPOINT ["node", "dist/server.js"]
