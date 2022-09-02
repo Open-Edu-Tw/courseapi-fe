@@ -1,7 +1,7 @@
 import type { Component } from "solid-js";
 
 export const Footer: Component = () => (
-	<footer class="footer flex justify-around flex-auto bg-gray-800 text-gray-200 items-center py-2">
+	<footer class="footer flex flex-col md:flex-row justify-around flex-auto bg-gray-800 text-gray-200 items-center py-2">
         <section>
             <a href="https://toedu.g0v.tw">
 		        <ToeduIcon />
