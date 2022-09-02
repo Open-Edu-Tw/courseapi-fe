@@ -4,5 +4,6 @@
 
 tasks:
   - before: corepack enable
-  - init: pnpm install && pnpm run build
-    command: pnpm run start
+    init: pnpm install
+    command: pnpm run dev
+  - init: DOCKER_BUILDKIT=1 docker build -t fe .
