@@ -9,13 +9,13 @@ export const Footer: Component = () => (
         </section>
 		<section class="flex gap-8">
 			<section class="collaborators flex gap-4 items-center">
-				<h2 class="font-medium">合作單位</h2>
+				<h2 class="font-medium">贊助單位</h2>
                 <a href="https://cloudnative.tw">
                     <img src="/cntug.png" alt="雲原生台灣社群" height="36px" width="36px" />
                 </a>
 			</section>
 			<section class="sponsors flex gap-4 items-center">
-				<h2 class="font-medium">贊助單位</h2>
+				<h2 class="font-medium">合作單位</h2>
                 <a href="https://ocf.tw">
                     <OcfLogo />
                 </a>
